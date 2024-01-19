@@ -69,6 +69,11 @@ export function MusicControls({
         const progressWidth = durationFormatted ? (player.currentTime / durationFormatted) * 100 : 0
 
         progressBar.style.width = progressWidth + "%"
+
+        if(progressBar.style.width === "100%"){
+            prevNextMusic()
+            playAndPauseMusicNextPrev()
+        }
     }
 
     backProgressBar.onclick = (e) => {
