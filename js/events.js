@@ -4,7 +4,8 @@ export function Events({
     nextSong,
     previousSong,
     playAndPauseMusic,
-    prevNextMusic
+    prevNextMusic,
+    playAndPauseMusicNextPrev,
 }){
 
     buttonPlay.addEventListener('click', () => {
@@ -22,12 +23,12 @@ export function Events({
 
     nextSong.addEventListener('click', () => {
         prevNextMusic()
-        playAndPauseMusic()
+        playAndPauseMusicNextPrev()
     })
 
     previousSong.addEventListener('click', () => {
         prevNextMusic("prev")
-        playAndPauseMusic()
+        playAndPauseMusicNextPrev()
         
     })
 }

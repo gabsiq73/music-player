@@ -26,7 +26,8 @@ const musicControls = MusicControls({
     progressBar,
     backProgressBar,
     currentTime, 
-    durationTime 
+    durationTime,
+    buttonPlay, 
 })
 
 Events({
@@ -36,6 +37,7 @@ Events({
     previousSong,
     playAndPauseMusic: musicControls.playAndPauseMusic,
     prevNextMusic: musicControls.prevNextMusic,
+    playAndPauseMusicNextPrev: musicControls.playAndPauseMusicNextPrev,
 })
 
 musicControls.prevNextMusic("init")

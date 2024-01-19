@@ -7,7 +7,8 @@ export function MusicControls({
     progressBar,
     backProgressBar,
     currentTime, 
-    durationTime 
+    durationTime,
+    buttonPlay,
 }) {
 
     let currentMusic = 0;
@@ -17,6 +18,14 @@ export function MusicControls({
             player.play()
         } else{
             player.pause();
+        }
+    }
+
+    function playAndPauseMusicNextPrev(){
+        if(player.paused && buttonPlay.classList == 'hide'){
+            player.play()
+        } else {
+            player.pause()
         }
     }
 
@@ -72,5 +81,6 @@ export function MusicControls({
         prevNextMusic,
         uptadeMusic,
         playAndPauseMusic,
+        playAndPauseMusicNextPrev,
     }
 }
