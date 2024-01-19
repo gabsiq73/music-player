@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Music</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <script src="js/main.js" type="module" defer></script>
+
+</head>
+<body>
+    <main>
+        <div class="inforMusic">
+            <div class="poster">
+                <img src="" alt="Music - ">
+            </div>
+            <h1></h1>
+            <h2></h2>
+        </div>
+        <div class="sound">
+            <div class="progressBar">
+                <div id="time">
+                    <span class="current">00:00</span>
+                    <span class="end">00:00</span>
+                </div>                
+                <div class="progress">
+                    <div id="bar"></div>
+                </div>
+            </div>
+            <audio id="player" src=""></audio>
+            <div class="controls">
+                <img id="previousSong" src="assets/Stop_and_play_fill-1.svg" alt="Previous Song Button">
+                <div class="playStop">
+                    <img id="buttonPlay" src="assets/Play_fill.svg" alt="Play Song Button">
+                    <img id="buttonPause" class="hide" src="assets/Stop_fill.svg" alt="Play Song Button">
+                </div>
+                <img id="nextSong" src="assets/Stop_and_play_fill_reverse.svg" alt="Next Song Button">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

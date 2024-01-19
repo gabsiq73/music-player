@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --fs-h1: clamp(1.6rem, 0.6rem + 5vw, 1.8rem);
+    --fs-h2: clamp(1rem, 0.6rem + 5vw, 1.2rem);
+
+    --primary-font: 'Inter', sans-serif;
+
+    --primary-color: #E5E7EB;
+    --secondary-color: #212936;
+    --bg-box-color: #121826a6;
+    --bt-controls-color: #4D5562;
+    --highlight-color: #C93B76;
+}
+
+.hide{
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    font: 1.6rem var(--primary-font) ;
+    
+    background: url(assets/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 3rem;
+   
+
+}
+
+main {
+    background: var(--bg-box-color);
+ 
+    width: 400px;
+    height: 600px;
+    padding: 2rem;
+
+    text-align: center;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem; 
+}
+
+.inforMusic {
+    height: 50vh;
+}
+
+.inforMusic h1 {
+    font-size: var( --fs-h1);
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.inforMusic h2 {
+    font-size: var(--fs-h2);
+    font-weight: 400;
+    color: var(--bt-controls-color);   
+} 
+
+h1, h2, span {
+    cursor: default;
+}
+
+.poster {  
+    width:100%;
+    height:90%;
+    overflow: hidden; 
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+.poster img {
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    object-fit: cover;
+}
+
+
+.sound{
+    margin-top: 1.2rem;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    font-size: var(--fs-h2);
+    font-weight: 400;
+    color: var(--bt-controls-color);
+}
+
+.progressBar{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.progress{
+    height: .6rem;
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#bar {
+    height: inherit; 
+    width: 50%;  
+    background-color: var(--highlight-color);
+}
+
+.playStop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--highlight-color);
+    border-radius: 10rem;
+    padding: 10px;
+    box-shadow: 0rem 0rem 5rem 1px #C93B76;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+#nextSong, #previousSong {
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+#nextSong:hover,
+#previousSong:hover,
+.playStop:hover{
+    filter: brightness(1.2);
+}
+
+.controls{
+    height: 50%;
+    padding: 0 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 460px) {
+    .inforMusic .poster{
+        height: 350px;
+    }
+    .sound{
+
+        justify-content: center;
+        align-items: center;
+    }
+    .progressBar{
+        height: 50px;
+        width: 100%;  
+    }
+    .controls{
+        height: 90px;
+        width: 150px;
+        padding: 5rem;
+      
+    }    
+    .playStop {
+        min-width: 55px;
+        min-height: 55px;
+    } 
+}
